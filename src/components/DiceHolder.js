@@ -7,13 +7,20 @@ export default class DiceHolder extends React.Component {
     constructor(props){
         super(props);
         this.handleAddDice = this.handleAddDice.bind(this);
+        this.removeAllDice = this.removeAllDice.bind(this);
     }
 
+    componentWillMount(){
+        if (!this.state) {
+            this.setState({
+                ActiveDice: []
+            })    
+        }
+    }
+    
     handleAddDice = (dice) => {
 
-        console.log(dice);
-        
-        let tempActiveDice = this.props.ActiveDice;
+        let tempActiveDice = this.state.ActiveDice;
 
         tempActiveDice.push(dice);
 
@@ -22,14 +29,23 @@ export default class DiceHolder extends React.Component {
         })
 
     }
+    
+    removeAllDice = () => {
+
+        this.setState({
+            ActiveDice: []
+        })
+
+    }
 
     render() {           
-
+        
         return (
             <div>
                 <button onClick={ () => this.handleAddDice(AllDice.GreenDice) }>Green Dice</button>
                 <button onClick={ () => this.handleAddDice(AllDice.YellowDice) }>Yellow Dice</button>
-                <ActiveDiceHolder ActiveDice={this.props.ActiveDice} />
+                <ActiveDiceHolder ActiveDice={ this.state.ActiveDice } /><br/>
+                <button onClick={ () => this.removeAllDice() }>Remove All Dice</button>
             </div>
         ) 
             
