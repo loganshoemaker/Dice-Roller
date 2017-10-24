@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+import RollButton from './RollButton.js';
 
 export default class ActiveDiceHolder extends React.Component {
     
@@ -11,14 +13,9 @@ export default class ActiveDiceHolder extends React.Component {
         this.removeThisDice = this.removeThisDice.bind(this);
     }
 
-/*
-    Need component state to equal props
-    Update state
-*/
-    
     // Need to pass and use nextProps
     componentWillReceiveProps(nextProps){
-        if (this.state.ActiveDice != nextProps.ActiveDice) {
+        if (this.state.ActiveDice !== nextProps.ActiveDice) {
             this.setState({
                 ActiveDice: nextProps.ActiveDice
             })
@@ -33,9 +30,7 @@ export default class ActiveDiceHolder extends React.Component {
         })
     }
 
-    render() {            
-
-        console.log("ActiveDiceHolder render")         
+    render() {                 
 
         if ( this.state.ActiveDice.length > 0 ) {
 
@@ -45,9 +40,10 @@ export default class ActiveDiceHolder extends React.Component {
                     <h1>Active Dice</h1>
                     {this.state.ActiveDice.map((item, i) => 
                         <div key={i}>
-                            <img src={item.imagefile} onClick={ () => this.removeThisDice(i)}/>
+                            <img alt={item.name} src={item.imagefile} onClick={ () => this.removeThisDice(i)}/>
                         </div>
                     )}
+                    <RollButton ActiveDice={this.state.ActiveDice} />
                 </div>
 
             )

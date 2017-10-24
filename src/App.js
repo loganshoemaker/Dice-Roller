@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 //import './App.css';
 import './styles/main.css';
 
-import * as AllDice from './components/DiceData.js';
 import DiceHolder from './components/DiceHolder.js';
 //import DicePool from './components/DicePool.js';
 
