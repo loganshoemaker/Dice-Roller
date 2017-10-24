@@ -1,0 +1,15 @@
+#dice-pool {
+  width: 100vw;
+  height: 45vh; }
+
+#active-dice {
+  width: 100vw;
+  height: 45vh; }
+  #active-dice img {
+    display: inline-block;
+    float: left;
+    margin: 25px; }
+
+.die {
+  display: inline-block;
+  float: left; }
