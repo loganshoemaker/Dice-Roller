@@ -15,7 +15,7 @@ export default class ActiveDiceHolder extends React.Component {
                 return (
                     
                     <div id="active-dice">
-                        <h1>Active Dice Holder</h1>
+                        <h1>Active Dice</h1>
                         {this.props.ActiveDice.map((item, i) => 
                             <div key={i}>
                                 <img src={item.imagefile}/>
