@@ -1,6 +1,5 @@
-#dice-pool {
-  width: 100vw;
-  height: 45vh; }
+img {
+  cursor: pointer; }
 
 #active-dice {
   width: 100vw;

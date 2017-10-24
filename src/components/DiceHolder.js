@@ -6,7 +6,7 @@ export default class DiceHolder extends React.Component {
 
     constructor(props){
         super(props);
-        this.handleAddDice = this.handleAddDice.bind(this);
+        this.addDice = this.addDice.bind(this);
         this.removeAllDice = this.removeAllDice.bind(this);
     }
 
@@ -18,33 +18,30 @@ export default class DiceHolder extends React.Component {
         }
     }
     
-    handleAddDice = (dice) => {
-
+    addDice = (dice) => {
         let tempActiveDice = this.state.ActiveDice;
-
         tempActiveDice.push(dice);
-
         this.setState({
             ActiveDice: tempActiveDice
         })
-
     }
-    
-    removeAllDice = () => {
 
+    removeAllDice = () => {
         this.setState({
             ActiveDice: []
         })
-
+        console.log("Remove All Dice Clicked");        
     }
 
     render() {           
-        
+        console.log("DiceHolder render");
         return (
             <div>
-                <button onClick={ () => this.handleAddDice(AllDice.GreenDice) }>Green Dice</button>
-                <button onClick={ () => this.handleAddDice(AllDice.YellowDice) }>Yellow Dice</button>
-                <ActiveDiceHolder ActiveDice={ this.state.ActiveDice } /><br/>
+                <h1>Click a die to add to your active dice</h1>
+                <img src={AllDice.GreenDice.imagefile} onClick={ () => this.addDice(AllDice.GreenDice) }/> 
+                <img src={AllDice.YellowDice.imagefile} onClick={ () => this.addDice(AllDice.YellowDice) }/>
+                <img src={AllDice.PurpleDice.imagefile} onClick={ () => this.addDice(AllDice.PurpleDice) }/>
+                <ActiveDiceHolder ActiveDice={this.state.ActiveDice} /><br/>
                 <button onClick={ () => this.removeAllDice() }>Remove All Dice</button>
             </div>
         ) 

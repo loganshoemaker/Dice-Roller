@@ -56,3 +56,10 @@ export const YellowDice = {
     type: 12,
     imagefile: YellowDie 
 };
+
+
+export const PurpleDice = {
+    name: 'purple',
+    type: 8,
+    imagefile: PurpleDie
+};
