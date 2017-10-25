@@ -7,6 +7,7 @@ import white_2L from './../../styles/images/whiteDice/white_2L.png';
 export const WhiteDice = {
     name: 'white',
     type: 12,
+    limit: 1,
     imagefile: WhiteDie,
       sides: [
         {success: 0,

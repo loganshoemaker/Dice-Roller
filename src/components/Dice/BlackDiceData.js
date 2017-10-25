@@ -7,6 +7,7 @@ import black_1t from './../../styles/images/blackDice/black_1t.png';
 export const BlackDice = {
     name: 'black',
     type: 6,
+    limit: 2,
     imagefile: blackDie,
       sides: [
         {success: 0,

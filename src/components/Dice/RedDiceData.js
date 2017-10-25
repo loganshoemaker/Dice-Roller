@@ -10,6 +10,7 @@ import red_2t from './../../styles/images/redDice/red_2t.png';
 export const RedDice = {
     name: 'red',
     type: 6,
+    limit: 1,
     imagefile: RedDie,
       sides: [
         {success: 0,
@@ -101,7 +102,7 @@ export const RedDice = {
          despair: 0,    
          dark_destiny: 0,
          light_destiny: 0,  
-         imgFile: red_1f},
+         imgFile: red_1f1t},
           
         {success: 0,
          advantage: 0,
@@ -111,7 +112,7 @@ export const RedDice = {
          despair: 0,    
          dark_destiny: 0,
          light_destiny: 0,  
-         imgFile: red_1t},
+         imgFile: red_1f1t},
           
         {success: 0,
          advantage: 0,

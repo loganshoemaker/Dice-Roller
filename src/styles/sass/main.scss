@@ -10,14 +10,21 @@ img {
     cursor: pointer;
 }
 
-#active-dice {
+.dice-container{
+    display: block;
     width: 100vw;
-    height: 45vh;
+    height: 220px;
+}
+
+#active-dice {
+    display: block;
+    width: 100vw;
+    height: 40vh;
     
     img {
         display: inline-block;
         float: left;
-        margin: 25px;
+        margin: 10px;
     }
 }
 
@@ -27,6 +34,16 @@ img {
 }
 
 #results {
-    width: 100vw
+    width: 100vw;
     margin: 25px 0px;
+    
+    img {
+        display: inline-block;
+        float: left;
+    }
+}
+
+.dice-preview {
+    display: inline-block;
+    float: left;
 }

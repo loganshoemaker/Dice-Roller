@@ -9,6 +9,7 @@ import blue_2a from './../../styles/images/blueDice/blue_2a.png';
 export const BlueDice = {
     name: 'blue',
     type: 6,
+    limit: 2,
     imagefile: BlueDie,
       sides: [
         {success: 1,
@@ -39,7 +40,7 @@ export const BlueDice = {
          despair: 0,    
          dark_destiny: 0,
          light_destiny: 0,  
-         imgFile: blue_1s},
+         imgFile: blue_1a1s},
           
         {success: 0,
          advantage: 0,
