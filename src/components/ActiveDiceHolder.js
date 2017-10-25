@@ -43,7 +43,7 @@ export default class ActiveDiceHolder extends React.Component {
                             <img alt={item.name} src={item.imagefile} onClick={ () => this.removeThisDice(i)}/>
                         </div>
                     )}
-                    <RollButton ActiveDice={this.state.ActiveDice} />
+                    <RollButton ActiveDice={this.state.ActiveDice} />     
                 </div>
 
             )
