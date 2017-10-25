@@ -17,34 +17,36 @@ export default class DiceHolder extends React.Component {
         this.removeAllDice = this.removeAllDice.bind(this);
         this.checkAvailableDice();
     }
+    
+    setDefaultState = () => {
+        this.setState({
+            ActiveDice: []
+        })
+        this.setState({
+            greenActive: 0
+        })          
+        this.setState({
+            yellowActive: 0  
+        })
+        this.setState({
+            redActive: 0
+        })          
+        this.setState({
+            blueActive: 0  
+        })          
+        this.setState({
+            blackActive: 0  
+        })
+        this.setState({
+            whiteActive: 0
+        })          
+        this.setState({
+            purpleActive: 0  
+        })                      
+    }
 
     componentWillMount(){
-        if (!this.state) {
-            this.setState({
-                ActiveDice: []
-            })
-            this.setState({
-                greenActive: 0
-            })          
-            this.setState({
-                yellowActive: 0  
-            })
-            this.setState({
-                redActive: 0
-            })          
-            this.setState({
-                blueActive: 0  
-            })          
-            this.setState({
-                blackActive: 0  
-            })
-            this.setState({
-                whiteActive: 0
-            })          
-            this.setState({
-                purpleActive: 0  
-            })                      
-        }
+        this.setDefaultState();
     }
     
     removeSingleDice = (dice) => {
@@ -75,10 +77,6 @@ export default class DiceHolder extends React.Component {
             
                 this.setState({ [diceStateName]: tempActiveDice });
                 
-                console.log("Dice Color: " + dice.name);
-                console.log("Limit: " + dice.limit);
-                console.log("Active Dice: " + diceState);
-                
             } else {
                 
                 alert(dice.name + " limit has been reached!");
@@ -90,8 +88,6 @@ export default class DiceHolder extends React.Component {
     }
     
     addDice(dice) {    
-        console.log(dice);
-        
         let tempActiveDice = this.state.ActiveDice;
         tempActiveDice.push(dice);
         this.setState({
@@ -100,34 +96,7 @@ export default class DiceHolder extends React.Component {
     }
 
     removeAllDice = () => {
-        this.setState({
-            ActiveDice: []
-        })   
-        this.setState({
-            ActiveDice: []
-        })
-        this.setState({
-            greenActive: 0
-        })          
-        this.setState({
-            yellowActive: 0  
-        })
-        this.setState({
-            redActive: 0
-        })          
-        this.setState({
-            blueActive: 0  
-        })          
-        this.setState({
-            blackActive: 0  
-        })
-        this.setState({
-            whiteActive: 0
-        })          
-        this.setState({
-            purpleActive: 0  
-        })  
-
+        this.setDefaultState();
     }
 
     render() {   
