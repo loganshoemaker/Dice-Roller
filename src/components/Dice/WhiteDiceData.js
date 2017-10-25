@@ -1,8 +1,8 @@
-import WhiteDie from './../styles/images/white.png';
-import white_1d from './../styles/images/whiteDice/white_1d.png';
-import white_1L from './../styles/images/whiteDice/white_1L.png';
-import white_2d from './../styles/images/whiteDice/white_2d.png';
-import white_2L from './../styles/images/whiteDice/white_2L.png';
+import WhiteDie from './../../styles/images/white.png';
+import white_1d from './../../styles/images/whiteDice/white_1d.png';
+import white_1L from './../../styles/images/whiteDice/white_1L.png';
+import white_2d from './../../styles/images/whiteDice/white_2d.png';
+import white_2L from './../../styles/images/whiteDice/white_2L.png';
 
 export const WhiteDice = {
     name: 'white',

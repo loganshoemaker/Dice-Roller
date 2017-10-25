@@ -1,11 +1,11 @@
-import YellowDie from './../styles/images/yellow.png';
-import yellow from './../styles/images/yellowDice/yellow.png';
-import yellow_1a from './../styles/images/yellowDice/yellow_1a.png';
-import yellow_1s from './../styles/images/yellowDice/yellow_1s.png';
-import yellow_1s1a from './../styles/images/yellowDice/yellow_1s1a.png';
-import yellow_1t from './../styles/images/yellowDice/yellow_1t.png';
-import yellow_2a from './../styles/images/yellowDice/yellow_2a.png';
-import yellow_2s from './../styles/images/yellowDice/yellow_2s.png';
+import YellowDie from './../../styles/images/yellow.png';
+import yellow from './../../styles/images/yellowDice/yellow.png';
+import yellow_1a from './../../styles/images/yellowDice/yellow_1a.png';
+import yellow_1s from './../../styles/images/yellowDice/yellow_1s.png';
+import yellow_1s1a from './../../styles/images/yellowDice/yellow_1s1a.png';
+import yellow_1t from './../../styles/images/yellowDice/yellow_1t.png';
+import yellow_2a from './../../styles/images/yellowDice/yellow_2a.png';
+import yellow_2s from './../../styles/images/yellowDice/yellow_2s.png';
 
 
 export const YellowDice = {
@@ -18,7 +18,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,         
          imgFile: yellow_2a
         },
 
@@ -27,7 +29,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_1a
         },  
 
@@ -36,7 +40,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_2a
         },
 
@@ -45,7 +51,9 @@ export const YellowDice = {
          triumph: 1,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_1t
         },
 
@@ -54,7 +62,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_1s
         },
 
@@ -63,7 +73,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_1s1a
         },
 
@@ -72,7 +84,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_1s
         },
 
@@ -81,7 +95,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_1s1a
         },
 
@@ -90,7 +106,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_2s
         },
 
@@ -99,7 +117,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_1s1a
         },  
 
@@ -108,7 +128,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow_2s
         },  
 
@@ -117,7 +139,9 @@ export const YellowDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,         
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,           
          imgFile: yellow
         },       
     ]        

@@ -1,12 +1,12 @@
 import React from 'react';
 import ActiveDiceHolder from './ActiveDiceHolder.js';
-import * as PurpleDice from './PurpleDiceData.js';
-import * as GreenDice from './GreenDiceData.js';
-import * as YellowDice from './YellowDiceData.js';
-import * as BlueDice from './BlueDiceData.js';
-import * as BlackDice from './BlackDiceData.js';
-import * as RedDice from './RedDiceData.js';
-import * as WhiteDice from './WhiteDiceData.js';
+import * as PurpleDice from './Dice/PurpleDiceData.js';
+import * as GreenDice from './Dice/GreenDiceData.js';
+import * as YellowDice from './Dice/YellowDiceData.js';
+import * as BlueDice from './Dice/BlueDiceData.js';
+import * as BlackDice from './Dice/BlackDiceData.js';
+import * as RedDice from './Dice/RedDiceData.js';
+import * as WhiteDice from './Dice/WhiteDiceData.js';
 
 export default class DiceHolder extends React.Component {
 

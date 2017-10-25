@@ -1,7 +1,7 @@
-import blackDie from './../styles/images/black.png';
-import black from './../styles/images/blackDice/black.png';
-import black_1f from './../styles/images/blackDice/black_1f.png';
-import black_1t from './../styles/images/blackDice/black_1t.png';
+import blackDie from './../../styles/images/black.png';
+import black from './../../styles/images/blackDice/black.png';
+import black_1f from './../../styles/images/blackDice/black_1f.png';
+import black_1t from './../../styles/images/blackDice/black_1t.png';
 
 
 export const BlackDice = {
@@ -14,7 +14,9 @@ export const BlackDice = {
          triumph: 0,
          failure: 1,
          threat: 0,
-         despair: 0,
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,  
          imgFile: black_1f},
           
         {success: 0,
@@ -22,7 +24,9 @@ export const BlackDice = {
          triumph: 0,
          failure: 1,
          threat: 0,
-         despair: 0,
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,  
          imgFile: black_1f},
           
         {success: 0,
@@ -30,7 +34,9 @@ export const BlackDice = {
          triumph: 0,
          failure: 0,
          threat: 1,
-         despair: 0,
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,  
          imgFile: black_1t},
           
         {success: 0,
@@ -38,7 +44,9 @@ export const BlackDice = {
          triumph: 0,
          failure: 0,
          threat: 1,
-         despair: 0,
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,  
          imgFile: black_1t},
           
         {success: 0,
@@ -46,7 +54,9 @@ export const BlackDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,  
          imgFile: black},
           
         {success: 0,
@@ -54,7 +64,9 @@ export const BlackDice = {
          triumph: 0,
          failure: 0,
          threat: 0,
-         despair: 0,
+         despair: 0,    
+         dark_destiny: 0,
+         light_destiny: 0,  
          imgFile: black}
     ]
 };
