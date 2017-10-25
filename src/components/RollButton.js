@@ -8,7 +8,7 @@ export default class RollButton extends React.Component {
         
         super(props)
         
-        this.state = {ActiveDice: this.props.ActiveDice, RollResults: {}};
+        this.state = {ActiveDice: this.props.ActiveDice, RollResults: {}, SideImages: []};
         
     }
     
@@ -22,19 +22,23 @@ export default class RollButton extends React.Component {
     
     calculateResults() {
 
-        let data = this.state.ActiveDice;;
+        let data = this.state.ActiveDice;
         
         let results = {};
+
+        let sideImages = [];
         
         let resultValues = [];
         
         data.map(function(dice){
         
-            let sideRolled = Math.floor(Math.random() * (dice.type-1)) + 0;
+            let sideRolled = Math.floor(Math.random() * (dice.type)) + 0;
             
             let sideRolledValue = dice.sides[sideRolled];
 
             resultValues.push(sideRolledValue);
+
+            sideImages.push(sideRolledValue.imgFile);
             
         })
 
@@ -44,6 +48,8 @@ export default class RollButton extends React.Component {
         results.threat = 0;
         results.triumph = 0;
         results.despair = 0;
+        results.dark_destiny = 0;
+        results.light_destiny = 0;
         
         resultValues.map(function(result){
             results.success += result.success;
@@ -52,14 +58,18 @@ export default class RollButton extends React.Component {
             results.threat += result.threat;
             results.triumph += result.triumph;
             results.despair += result.despair;
+            results.dark_destiny += result.dark_destiny;
+            results.light_destiny += result.light_destiny;
         })
         
         this.setState({
             RollResults: results
         })
         
-        console.log(results);
-        
+        this.setState({
+            SideImages: sideImages
+        })
+
     }
     
     render() {            
@@ -67,31 +77,11 @@ export default class RollButton extends React.Component {
         return (
             <div>
                 <button onClick={ () => this.calculateResults() }>Roll</button>
-                <RollResults RollResults={this.state.RollResults} />
+                <RollResults RollResults={this.state.RollResults} SideImages={this.state.SideImages} />
             </div>
             
         )
         
     }
-    
+
 }
-
-/* 
-roll a side
-    -   random number between 1 and type
-    -   values from that index of that sides array
-
-export const PurpleDice = {
-    name: 'purple',
-    type: 8,
-    imagefile: PurpleDie,
-    sides: [
-        {success: 0,
-        advantage: 0,
-        triumph: 0,
-        failure: 0,
-        threat: 0,
-        despair: 0}
-    ]       
-};
-*/
