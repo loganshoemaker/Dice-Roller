@@ -39,3 +39,17 @@ import diceDispatcher from './DiceDispatcher';
 //        type: "GET_ACTIVE_DICE",
 //    })
 //}
+
+export function addActiveDice(data) {
+    diceDispatcher.dispatch({
+        type: "ADD_ACTIVE_DICE",
+        data
+    })
+}
+
+export function removeActiveDice(data) {
+    diceDispatcher.dispatch({
+        type: "REMOVE_ACTIVE_DICE",
+        data
+    })
+}

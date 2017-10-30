@@ -1,4 +1,3 @@
-import RedDie from './../../styles/images/red.png';
 import red from './../../styles/images/redDice/red.png';
 import red_1d from './../../styles/images/redDice/red_1d.png';
 import red_1f from './../../styles/images/redDice/red_1f.png';
@@ -8,7 +7,6 @@ import red_2f from './../../styles/images/redDice/red_2f.png';
 import red_2t from './../../styles/images/redDice/red_2t.png';
 
 export const RedDice = {
-    imagefile: RedDie,
       sides: [
         {success: 0,
          advantage: 0,

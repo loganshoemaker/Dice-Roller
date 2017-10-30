@@ -1,4 +1,3 @@
-import PurpleDie from './../../styles/images/purple.png';
 import purple from './../../styles/images/purpleDice/purple.png';
 import purple_1f from './../../styles/images/purpleDice/purple_1f.png';
 import purple_1t from './../../styles/images/purpleDice/purple_1t.png';
@@ -7,7 +6,6 @@ import purple_2f from './../../styles/images/purpleDice/purple_2f.png';
 import purple_2t from './../../styles/images/purpleDice/purple_2t.png';
 
 export const PurpleDice = {
-    imagefile: PurpleDie,
       sides: [
         {success: 0,
          advantage: 0,

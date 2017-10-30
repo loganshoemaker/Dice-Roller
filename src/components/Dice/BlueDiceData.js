@@ -1,4 +1,3 @@
-import BlueDie from './../../styles/images/blue.png';
 import blue from './../../styles/images/blueDice/blue.png';
 import blue_1a from './../../styles/images/blueDice/blue_1a.png';
 import blue_1a1s from './../../styles/images/blueDice/blue_1a1s.png';
@@ -7,7 +6,6 @@ import blue_2a from './../../styles/images/blueDice/blue_2a.png';
 
 
 export const BlueDice = {
-    imagefile: BlueDie,
       sides: [
         {success: 1,
          advantage: 0,

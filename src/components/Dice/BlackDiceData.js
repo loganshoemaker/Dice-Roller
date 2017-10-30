@@ -1,11 +1,9 @@
-import blackDie from './../../styles/images/black.png';
 import black from './../../styles/images/blackDice/black.png';
 import black_1f from './../../styles/images/blackDice/black_1f.png';
 import black_1t from './../../styles/images/blackDice/black_1t.png';
 
 
 export const BlackDice = {
-    imagefile: blackDie,
       sides: [
         {success: 0,
          advantage: 0,

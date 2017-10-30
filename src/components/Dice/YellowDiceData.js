@@ -1,4 +1,3 @@
-import YellowDie from './../../styles/images/yellow.png';
 import yellow from './../../styles/images/yellowDice/yellow.png';
 import yellow_1a from './../../styles/images/yellowDice/yellow_1a.png';
 import yellow_1s from './../../styles/images/yellowDice/yellow_1s.png';
@@ -9,7 +8,6 @@ import yellow_2s from './../../styles/images/yellowDice/yellow_2s.png';
 
 
 export const YellowDice = {
-    imagefile: YellowDie,
     sides: [
         {success: 0,
          advantage: 2,

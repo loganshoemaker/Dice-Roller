@@ -1,4 +1,3 @@
-import GreenDie from './../../styles/images/green.png';
 import green from './../../styles/images/greenDice/green.png';
 import green_a1 from './../../styles/images/greenDice/green_a1.png';
 import green_a2 from './../../styles/images/greenDice/green_a2.png';
@@ -8,7 +7,6 @@ import green_s2 from './../../styles/images/greenDice/green_s2.png';
 
 
 export const GreenDice = {
-    imagefile: GreenDie,
       sides: [
         {success: 1,
          advantage: 0,
