@@ -8,9 +8,6 @@ import red_2f from './../../styles/images/redDice/red_2f.png';
 import red_2t from './../../styles/images/redDice/red_2t.png';
 
 export const RedDice = {
-    name: 'red',
-    type: 6,
-    limit: 1,
     imagefile: RedDie,
       sides: [
         {success: 0,

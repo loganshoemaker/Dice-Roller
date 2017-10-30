@@ -8,9 +8,6 @@ import green_s2 from './../../styles/images/greenDice/green_s2.png';
 
 
 export const GreenDice = {
-    name: 'green',
-    type: 8,
-    limit: 3,
     imagefile: GreenDie,
       sides: [
         {success: 1,

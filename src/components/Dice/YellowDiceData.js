@@ -9,9 +9,6 @@ import yellow_2s from './../../styles/images/yellowDice/yellow_2s.png';
 
 
 export const YellowDice = {
-    name: 'yellow',
-    type: 12,
-    limit: 2,
     imagefile: YellowDie,
     sides: [
         {success: 0,

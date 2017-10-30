@@ -7,9 +7,6 @@ import blue_2a from './../../styles/images/blueDice/blue_2a.png';
 
 
 export const BlueDice = {
-    name: 'blue',
-    type: 6,
-    limit: 2,
     imagefile: BlueDie,
       sides: [
         {success: 1,

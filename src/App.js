@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
 import './styles/main.css';
 
+//import DiceStore from './components/DiceStore.js';
 import DiceHolder from './components/DiceHolder.js';
 //import DicePool from './components/DicePool.js';
 

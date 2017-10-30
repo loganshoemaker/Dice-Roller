@@ -7,9 +7,6 @@ import purple_2f from './../../styles/images/purpleDice/purple_2f.png';
 import purple_2t from './../../styles/images/purpleDice/purple_2t.png';
 
 export const PurpleDice = {
-    name: 'purple',
-    type: 8,
-    limit: 3,
     imagefile: PurpleDie,
       sides: [
         {success: 0,

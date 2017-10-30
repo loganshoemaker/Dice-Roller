@@ -1,31 +1,3 @@
-img {
-  cursor: pointer; }
-
-.dice-container {
-  display: block;
-  width: 100vw;
-  height: 220px; }
-
-#active-dice {
-  display: block;
-  width: 100vw;
-  height: 40vh; }
-  #active-dice img {
-    display: inline-block;
-    float: left;
-    margin: 10px; }
-
-.die {
+.availableDice {
   display: inline-block;
-  float: left; }
-
-#results {
-  width: 100vw;
-  margin: 25px 0px; }
-  #results img {
-    display: inline-block;
-    float: left; }
-
-.dice-preview {
-  display: inline-block;
-  float: left; }
+  text-align: center; }
