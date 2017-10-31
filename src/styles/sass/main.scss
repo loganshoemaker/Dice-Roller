@@ -2,10 +2,10 @@
 
 #dice-container {
     text-align: center;
+    padding: 25px;
     
     section {
         padding: 25px;
-        margin: 25px;
         border-radius: 15px;
         border: 1px solid grey;
         box-shadow: 0px 0px 4px grey;
@@ -17,6 +17,11 @@ button {
     display: block;
     padding: 15px;
     width: 135px;
+}
+
+.description {
+    font-style: italic;
+    margin: 25px;
 }
 
 .die {

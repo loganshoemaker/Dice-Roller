@@ -37,7 +37,13 @@ export default class ActiveDiceHolder extends React.Component {
     
     checkResetButton(a) {
         if (a.length > 0) {
-            return <button onClick={ () => window.location.reload()}>Remove All Dice</button>
+            
+            return (
+                <div>
+                    <div className="description">Click a dice to remove it from your active pool</div> 
+                    <button onClick={ () => window.location.reload()}>Remove All Dice</button>
+                </div>
+            )
         }
     }
     

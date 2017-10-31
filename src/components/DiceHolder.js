@@ -41,7 +41,6 @@ export default class DiceHolder extends React.Component {
             <div id="dice-container">
                 {rollResults}
                 <section id="available-dice-container">
-                    <h2>Available Dice</h2>
                     <AvailableDiceHolder availableDice={this.state.availableDice} dice={DiceStore.getDice()} />
                 </section>
                 <section id="active-dice-container">
