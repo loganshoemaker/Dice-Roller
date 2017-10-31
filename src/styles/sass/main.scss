@@ -4,6 +4,13 @@
     text-align: center;
 }
 
+button {
+    margin: auto;
+    display: block;
+    padding: 15px;
+    width: 135px;
+}
+
 .die {
     display: inline-block;
     cursor: pointer;
@@ -27,57 +34,5 @@
             margin: 10px;
         }
     }
-    
-    button {
-        margin: auto;
-        display: block;
-        padding: 10px;
-        
-    }
-}
 
-//#dice-pool {
-//
-//}
-//
-//img {
-//    cursor: pointer;
-//}
-//
-//.dice-container{
-//    display: block;
-//    width: 100vw;
-//    height: 220px;
-//}
-//
-//#active-dice {
-//    display: block;
-//    width: 100vw;
-//    height: 40vh;
-//    
-//    img {
-//        display: inline-block;
-//        float: left;
-//        margin: 10px;
-//    }
-//}
-//
-//.die {
-//    display: inline-block;
-//    float: left;
-//}
-//
-//#results {
-//    width: 100vw;
-//    margin: 25px 0px;
-//    
-//    img {
-//        display: inline-block;
-//        float: left;
-//    }
-//}
-//
-//.dice-preview {
-//    display: inline-block;
-//    float: left;
-//}
+}

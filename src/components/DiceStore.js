@@ -21,7 +21,9 @@ class DiceStore extends EventEmitter {
 
     constructor() {
         super();
-
+        
+        this.rolled = false;
+        
         this.dice = [
             {name: 'purple',
              facts: PurpleDice.PurpleDice},
@@ -99,6 +101,15 @@ class DiceStore extends EventEmitter {
             sides: []
         }
     }
+    
+    checkRolled() {
+        return this.rolled;
+    }
+    
+    clearRollResults() {
+        this.rolled = false;
+        this.emit("change");
+    }    
     
     getRollResults() {
         let a = this.results;
@@ -181,8 +192,7 @@ class DiceStore extends EventEmitter {
             })
         })
 
-        console.log(this.results);
-        
+        this.rolled = true;
         this.emit("change");
         
     }
@@ -236,7 +246,15 @@ class DiceStore extends EventEmitter {
             case "REMOVE_ACTIVE_DICE": {
                 this.removeActiveDice(action.data);
                 break;
-            }                  
+            }
+            case "ROLL": {
+                this.rollDice();
+                break;
+            }    
+            case "CLEAR_ROLL_RESULTS": {
+                this.clearRollResults();
+                break;
+            }
             default: {
                 break;
             }

@@ -11,7 +11,7 @@ export default class DiceHolder extends React.Component {
 
     constructor(){
         super();
-            this.state = {activeDice: DiceStore.getActive(), availableDice: DiceStore.getAvailable(), rollResults: DiceStore.getRollResults()}
+            this.state = {activeDice: DiceStore.getActive(), availableDice: DiceStore.getAvailable(), rollResults: DiceStore.getRollResults(), rolled: DiceStore.checkRolled()}
     }
     
     componentDidMount(){
@@ -19,22 +19,33 @@ export default class DiceHolder extends React.Component {
             this.setState({
                 activeDice: DiceStore.getActive(),
                 availableDice: DiceStore.getAvailable(),
-                rollResults: DiceStore.getRollResults()
+                rollResults: DiceStore.getRollResults(),
+                rolled: DiceStore.checkRolled()
             })
         })
     }
     
+    checkIfRolled() {
+        if (this.state.rolled == true){
+            return <div id="roll-results-container">
+                    <RollResults data={this.state.rollResults}/>                
+                </div>
+        }
+    }
+
     render() {
+        
+        const rollResults = this.checkIfRolled();
+
         return (
             <div id="dice-container">
+                {rollResults}
                 <div id="available-dice-container">
                     <AvailableDiceHolder availableDice={this.state.availableDice} dice={DiceStore.getDice()} />
                 </div>
                 <div id="active-dice-container">
-                    <button onClick={ () => DiceStore.rollDice() }>Roll Dice!</button>
                     <ActiveDiceHolder activeDice={this.state.activeDice} dice={DiceStore.getDice()} availableDice={this.state.availableDice}/>
                 </div>
-                <RollResults data={this.state.rollResults}/>
             </div>
         )
     }

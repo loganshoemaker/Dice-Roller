@@ -1,6 +1,12 @@
 #dice-container {
   text-align: center; }
 
+button {
+  margin: auto;
+  display: block;
+  padding: 15px;
+  width: 135px; }
+
 .die {
   display: inline-block;
   cursor: pointer; }
@@ -13,8 +19,3 @@
 #active-dice-container .die img {
   width: 105px;
   margin: 10px; }
-
-#active-dice-container button {
-  margin: auto;
-  display: block;
-  padding: 10px; }

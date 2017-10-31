@@ -29,6 +29,12 @@ export default class ActiveDiceHolder extends React.Component {
         return diceContainer;
     }
     
+    checkRollButton(a) {
+        if (a.length > 0) {
+            return <button onClick={ () => DiceActions.roll() }>Roll Dice</button>
+        }
+    }
+    
     checkResetButton(a) {
         if (a.length > 0) {
             return <button onClick={ () => window.location.reload()}>Remove All Dice</button>
@@ -37,20 +43,12 @@ export default class ActiveDiceHolder extends React.Component {
     
     render() {
         const diceContainer = this.prepareActiveDice();
+        const rollButton = this.checkRollButton(diceContainer);
         const resetButton = this.checkResetButton(diceContainer);        
-//        const resetButton = '';
-        
-//        if (diceContainer.length > 0) {
-//            console.log("bigger");
-//            const resetButton = <button onClick={ () => window.location.reload()}>Remove All Dice</button>
-//        } else {
-//            console.log("none");
-//            const resetButton = "Heyyy"
-//        }
-        
 
         return (
             <div>
+                {rollButton}
                 {diceContainer.map((dice, i) => 
                     <div className="die" key={i}>
                         <img onClick={ () => DiceActions.removeActiveDice(dice) } src={dice.imagefile} alt={dice.name}/>
