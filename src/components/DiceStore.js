@@ -21,7 +21,7 @@ class DiceStore extends EventEmitter {
 
     constructor() {
         super();
-        
+
         this.dice = [
             {name: 'purple',
              facts: PurpleDice.PurpleDice},
@@ -94,9 +94,67 @@ class DiceStore extends EventEmitter {
             failure: 0,
             triumph: 0,
             despair: 0,
-            darkdestiny: 0,
-            lightdestiny: 0
-        }     
+            dark_destiny: 0,
+            light_destiny: 0,
+            sides: []
+        }
+    }
+    
+    getRollResults() {
+        return this.results;
+    }
+    
+    rollDice() {
+        
+        this.results = {
+            success: 0,
+            threat: 0,
+            advantage: 0,
+            failure: 0,
+            triumph: 0,
+            despair: 0,
+            dark_destiny: 0,
+            light_destiny: 0,
+            sides: []
+        }
+        
+        const diceToRoll = [];
+        const sidesRolled = [];
+        const sidesRolledImages = [];
+        let availableKeys = [];
+        
+        // Create the pool of dice to actually roll
+        this.activeDice.map((activeDice) => {
+            this.dice.map((dice) => {
+                if (activeDice.active !== 0 && activeDice.name == dice.name){
+                    let i = 0;
+                    while (i < activeDice.active) {
+                        diceToRoll.push(Object.assign(activeDice, dice));
+                        i++;
+                    }
+                }
+            })    
+        })
+        
+        // Get the number of sides
+        diceToRoll.map((dice) => {
+            const numberOfSides = Object.keys(dice.facts.sides).length;
+            
+            // Get a random side for a dice and push that it to an array
+            const sideRolled = Math.floor(Math.random() * numberOfSides) + 0;
+            sidesRolled.push(dice.facts.sides[sideRolled]);
+            this.results.sides.push(dice.facts.sides[sideRolled].imgFile);
+            availableKeys = Object.keys(dice.facts.sides[sideRolled]);
+        })
+
+        sidesRolled.map((side) => {
+            availableKeys.map((key) => {
+                this.results[key] = (this.results[key] + side[key])
+            })
+        })
+
+        this.emit("change");
+        
     }
 
     getDice() {
@@ -140,11 +198,7 @@ class DiceStore extends EventEmitter {
     }
     
     handleActions(action) {
-        switch(action.type) {
-//            case "GET_AVAILABLE_DICE": {
-//                this.getAvailable();
-//                break;
-//            }            
+        switch(action.type) {   
             case "ADD_ACTIVE_DICE": {
                 this.addActiveDice(action.data);
                 break;

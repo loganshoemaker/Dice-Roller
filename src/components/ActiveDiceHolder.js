@@ -3,6 +3,7 @@ import React from 'react';
 //import RollButton from './RollButton.js';
 //import RollResults from './RollResults.js';
 import * as DiceActions from './DiceActions';
+import DiceStore from './DiceStore';
 
 export default class ActiveDiceHolder extends React.Component {
     
