@@ -11,7 +11,7 @@ export default class ActiveDiceHolder extends React.Component {
         super(props)
     }
 
-    prepareActivedice() {
+    prepareActiveDice() {
         
         let diceContainer = [];
         
@@ -29,17 +29,35 @@ export default class ActiveDiceHolder extends React.Component {
         return diceContainer;
     }
     
+    checkResetButton(a) {
+        if (a.length > 0) {
+            return <button onClick={ () => window.location.reload()}>Remove All Dice</button>
+        }
+    }
+    
     render() {
+        const diceContainer = this.prepareActiveDice();
+        const resetButton = this.checkResetButton(diceContainer);        
+//        const resetButton = '';
         
-        const diceContainer = this.prepareActivedice();
+//        if (diceContainer.length > 0) {
+//            console.log("bigger");
+//            const resetButton = <button onClick={ () => window.location.reload()}>Remove All Dice</button>
+//        } else {
+//            console.log("none");
+//            const resetButton = "Heyyy"
+//        }
+        
 
         return (
-            diceContainer.map((dice, i) => 
-                <div className="die" key={i}>
-                    <img onClick={ () => DiceActions.removeActiveDice(dice) } src={dice.imagefile} alt={dice.name}/>
-                </div>
-            )
+            <div>
+                {diceContainer.map((dice, i) => 
+                    <div className="die" key={i}>
+                        <img onClick={ () => DiceActions.removeActiveDice(dice) } src={dice.imagefile} alt={dice.name}/>
+                    </div>
+                )}
+                {resetButton}
+            </div>        
         )
     }     
 }
-

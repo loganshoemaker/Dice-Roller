@@ -1,12 +1,40 @@
 @import 'reset';
 
-$black: #000000;
-
-.die {
-    display: inline-block;
+#dice-container {
     text-align: center;
 }
 
+.die {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#available-dice-container {
+    .die {
+        margin: 15px;
+        
+        img {
+            width: 75px;
+        }
+    }
+}
+
+#active-dice-container {
+    
+    .die {
+        img {
+            width: 105px;
+            margin: 10px;
+        }
+    }
+    
+    button {
+        margin: auto;
+        display: block;
+        padding: 10px;
+        
+    }
+}
 
 //#dice-pool {
 //

@@ -1,3 +1,20 @@
+#dice-container {
+  text-align: center; }
+
 .die {
   display: inline-block;
-  text-align: center; }
+  cursor: pointer; }
+
+#available-dice-container .die {
+  margin: 15px; }
+  #available-dice-container .die img {
+    width: 75px; }
+
+#active-dice-container .die img {
+  width: 105px;
+  margin: 10px; }
+
+#active-dice-container button {
+  margin: auto;
+  display: block;
+  padding: 10px; }

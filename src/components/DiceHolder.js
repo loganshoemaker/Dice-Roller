@@ -26,14 +26,12 @@ export default class DiceHolder extends React.Component {
     
     render() {
         return (
-            <div>
-                <div>
+            <div id="dice-container">
+                <div id="available-dice-container">
                     <AvailableDiceHolder availableDice={this.state.availableDice} dice={DiceStore.getDice()} />
                 </div>
-                <div>
+                <div id="active-dice-container">
                     <button onClick={ () => DiceStore.rollDice() }>Roll Dice!</button>
-                </div>
-                <div>
                     <ActiveDiceHolder activeDice={this.state.activeDice} dice={DiceStore.getDice()} availableDice={this.state.availableDice}/>
                 </div>
                 <RollResults data={this.state.rollResults}/>

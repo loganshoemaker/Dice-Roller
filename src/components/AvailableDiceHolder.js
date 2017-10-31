@@ -9,7 +9,6 @@ export default class AvailableDiceHolder extends React.Component {
     }
     
     render() {
-
         return ( 
             this.props.availableDice.map((dice, i) =>
                 <div className="die" key={i}>                          
