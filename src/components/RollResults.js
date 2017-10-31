@@ -1,13 +1,13 @@
 import React from 'react';
 
+import DiceStore from './DiceStore';
+
 export default class RollResults extends React.Component {
     constructor(props) {
-        super(props);
-        
+        super(props); 
     }
     
     render() {
-        
         return (            
             <div>
                 <div>
@@ -23,8 +23,11 @@ export default class RollResults extends React.Component {
                     <strong>Light Destiny: {this.props.data.light_destiny}</strong><br/>              
                     <strong>Dark Destiny: {this.props.data.dark_destiny}</strong><br/>  
                 </div>
+                <div>
+                    <h1>Net Success: {this.props.data.netSuccess}</h1>
+                    <h1>Net Advantage: {this.props.data.netAdvantage}</h1>
+                </div>
             </div>
-
         )
     }
 }

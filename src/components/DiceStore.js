@@ -59,7 +59,7 @@ class DiceStore extends EventEmitter {
              available: 1,
             imagefile: RedDie,},
             {name: 'white',
-             available: 1,
+             available: 6,
             imagefile: WhiteDie,}
         ]
         
@@ -101,7 +101,35 @@ class DiceStore extends EventEmitter {
     }
     
     getRollResults() {
-        return this.results;
+        let a = this.results;
+        let b = {};
+        /*
+        Success: check if action succeeds; total < 0 = success. 1:1 with failure. increase magnitude above 0.
+        Advantage: opportunity for positive side effect. 1:1 with threat. increase magnitude.
+        Triumph: equals 1 success. Can cancel success with failure. Secondary side effect not canceled by failure.
+        */
+        
+        /*
+        Failure: If failure > 0, net failure.  Multiple failures do not add up; is boolean.
+        Threat: Increase per extra threat total after counting?
+        Despair: equals 1 failure, can be canceled.
+        */
+        /*
+        DarkDestiny: Just total
+        LightDestiny: Just total
+        */
+        b.success = a.success;
+        b.advantage = a.advantage;
+        b.failure = a.failure;
+        b.threat = a.threat;
+        b.despair = a.despair;
+        b.triumph = a.triumph;
+        b.sides = this.results.sides;        
+        b.dark_destiny = a.dark_destiny;
+        b.light_destiny = a.light_destiny;
+        b.netSuccess = (a.success + a.triumph) - (a.failure + a.despair);
+        b.netAdvantage = (a.advantage - a.threat)        
+        return b;
     }
     
     rollDice() {
@@ -153,6 +181,8 @@ class DiceStore extends EventEmitter {
             })
         })
 
+        console.log(this.results);
+        
         this.emit("change");
         
     }

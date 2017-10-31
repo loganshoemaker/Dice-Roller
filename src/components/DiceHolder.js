@@ -25,7 +25,6 @@ export default class DiceHolder extends React.Component {
     }
     
     render() {
-        console.log(this.state.rollResults);
         return (
             <div>
                 <div>
