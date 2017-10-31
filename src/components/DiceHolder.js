@@ -40,12 +40,14 @@ export default class DiceHolder extends React.Component {
         return (
             <div id="dice-container">
                 {rollResults}
-                <div id="available-dice-container">
+                <section id="available-dice-container">
+                    <h2>Available Dice</h2>
                     <AvailableDiceHolder availableDice={this.state.availableDice} dice={DiceStore.getDice()} />
-                </div>
-                <div id="active-dice-container">
+                </section>
+                <section id="active-dice-container">
+                    <h1>Active Dice</h1>
                     <ActiveDiceHolder activeDice={this.state.activeDice} dice={DiceStore.getDice()} availableDice={this.state.availableDice}/>
-                </div>
+                </section>
             </div>
         )
     }

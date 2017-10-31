@@ -10,7 +10,8 @@ export default class RollResults extends React.Component {
     
     render() {
         return (            
-            <div>
+            <section id="roll-results-container">
+                <h2>Roll Results</h2>
                 <div>
                     {this.props.data.sides.map((image, i) => <img key={i} src={image}/>)}
                 </div>
@@ -21,15 +22,15 @@ export default class RollResults extends React.Component {
                     <strong>Threat: {this.props.data.threat}</strong><br/>  
                     <strong>Triumph: {this.props.data.triumph}</strong><br/>
                     <strong>Despair: {this.props.data.despair}</strong><br/>
-                    <strong>Light Destiny: {this.props.data.light_destiny}</strong><br/>              
-                    <strong>Dark Destiny: {this.props.data.dark_destiny}</strong><br/>  
+                    <strong>Light Destiny: {this.props.data.light_destiny}</strong><br/>      
+                    <strong>Dark Destiny: {this.props.data.dark_destiny}</strong>
                 </div>
                 <div>
                     <h1>Net Success: {this.props.data.netSuccess}</h1>
                     <h1>Net Advantage: {this.props.data.netAdvantage}</h1>
                 </div>
                 <button onClick={ () => DiceActions.clearRollResults() }>Clear Results</button>
-            </div>
+            </section>
         )
     }
 }

@@ -1,5 +1,11 @@
 #dice-container {
   text-align: center; }
+  #dice-container section {
+    padding: 25px;
+    margin: 25px;
+    border-radius: 15px;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 4px grey; }
 
 button {
   margin: auto;
@@ -15,6 +21,14 @@ button {
   margin: 15px; }
   #available-dice-container .die img {
     width: 75px; }
+  #available-dice-container .die .remaining-label {
+    font-style: italic;
+    font-size: .8em;
+    display: block; }
+  #available-dice-container .die .remaining-value {
+    font-weight: bold;
+    font-size: 2em;
+    display: block; }
 
 #active-dice-container .die img {
   width: 105px;

@@ -13,7 +13,8 @@ export default class AvailableDiceHolder extends React.Component {
             this.props.availableDice.map((dice, i) =>
                 <div className="die" key={i}>                          
                     <img onClick={ () => DiceActions.addActiveDice(dice)} src={dice.imagefile} alt={dice.name}/><br/>
-                    <span>{dice.available}</span>
+                    <span className="remaining-value">{dice.available}</span>
+                    <span className="remaining-label">Remaining</span>
                 </div>
             )
         )
