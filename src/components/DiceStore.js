@@ -139,7 +139,8 @@ class DiceStore extends EventEmitter {
         b.dark_destiny = a.dark_destiny;
         b.light_destiny = a.light_destiny;
         b.netSuccess = (a.success + a.triumph) - (a.failure + a.despair);
-        b.netAdvantage = (a.advantage - a.threat)        
+        b.netAdvantage = (a.advantage - a.threat);       
+        
         return b;
     }
     

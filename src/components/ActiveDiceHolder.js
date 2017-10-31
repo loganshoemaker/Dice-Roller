@@ -35,9 +35,23 @@ export default class ActiveDiceHolder extends React.Component {
         }
     }
     
+    checkActiveDice(a) {
+        console.log(a.length);
+        if (a.length > 0){
+            return (
+                a.map((dice, i) => 
+                    <div className="die" key={i}>
+                        <img onClick={ () => DiceActions.removeActiveDice(dice) } src={dice.imagefile} alt={dice.name}/>
+                    </div>
+                )
+            )
+        } else {
+            return <div className="description">You have no active dice</div>
+        }
+    }
+    
     checkResetButton(a) {
         if (a.length > 0) {
-            
             return (
                 <div>
                     <div className="description">Click a dice to remove it from your active pool</div> 
@@ -50,16 +64,13 @@ export default class ActiveDiceHolder extends React.Component {
     render() {
         const diceContainer = this.prepareActiveDice();
         const rollButton = this.checkRollButton(diceContainer);
-        const resetButton = this.checkResetButton(diceContainer);        
+        const resetButton = this.checkResetButton(diceContainer);   
+        const activeDice = this.checkActiveDice(diceContainer);
 
         return (
             <div>
                 {rollButton}
-                {diceContainer.map((dice, i) => 
-                    <div className="die" key={i}>
-                        <img onClick={ () => DiceActions.removeActiveDice(dice) } src={dice.imagefile} alt={dice.name}/>
-                    </div>
-                )}
+                {activeDice}
                 {resetButton}
             </div>        
         )
