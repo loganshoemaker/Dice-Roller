@@ -43,25 +43,25 @@ class DiceStore extends EventEmitter {
         
         this.availableDice = [
             {name: 'green',
-             available: 3,
+             available: 6,
             imagefile: GreenDie,},
             {name: 'yellow',
-             available: 2,
+             available: 4,
             imagefile: YellowDie,},
             {name: 'black',
-             available: 2,
+             available: 4,
             imagefile: BlackDie},
             {name: 'blue',
-             available: 2,
+             available: 4,
              imagefile: BlueDie,},
             {name: 'purple',
-             available: 3,
+             available: 6,
             imagefile: PurpleDie,},
             {name: 'red',
-             available: 1,
+             available: 2,
             imagefile: RedDie,},
             {name: 'white',
-             available: 6,
+             available: 2,
             imagefile: WhiteDie,}
         ]
         
