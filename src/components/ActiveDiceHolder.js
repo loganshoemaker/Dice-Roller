@@ -1,7 +1,6 @@
 import React from 'react';
 
-//import RollButton from './RollButton.js';
-//import RollResults from './RollResults.js';
+import Button from './Button';
 import * as DiceActions from './DiceActions';
 import DiceStore from './DiceStore';
 
@@ -31,7 +30,7 @@ export default class ActiveDiceHolder extends React.Component {
     
     checkRollButton(a) {
         if (a.length > 0) {
-            return <button onClick={ () => DiceActions.roll() }>Roll Dice</button>
+            return <Button handleClick={ () => DiceActions.roll() } text="Roll Dice" />
         }
     }
     
@@ -55,7 +54,7 @@ export default class ActiveDiceHolder extends React.Component {
             return (
                 <div>
                     <div className="description">Click a dice to remove it from your active pool</div> 
-                    <button onClick={ () => window.location.reload()}>Remove All Dice</button>
+                    <Button handleClick={ () => window.location.reload()} text="Remove All Dice" />    
                 </div>
             )
         }

@@ -2,6 +2,7 @@ import React from 'react';
 
 import * as DiceActions from './DiceActions';
 import DiceStore from './DiceStore';
+import Button from './Button';
 
 export default class RollResults extends React.Component {
     constructor(props) {
@@ -29,7 +30,7 @@ export default class RollResults extends React.Component {
                     <h1>Net Success: {this.props.data.netSuccess}</h1>
                     <h1>Net Advantage: {this.props.data.netAdvantage}</h1>
                 </div>
-                <button onClick={ () => DiceActions.clearRollResults() }>Clear Results</button>
+                <Button handleClick={ () => DiceActions.clearRollResults() } text="ClearResults" />
             </section>
         )
     }
