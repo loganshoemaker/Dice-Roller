@@ -102,7 +102,7 @@ class DiceStore extends EventEmitter {
         }
     }
     
-    checkRolled() {
+    checkIfRolled() {
         return this.rolled;
     }
     
@@ -114,21 +114,6 @@ class DiceStore extends EventEmitter {
     getRollResults() {
         let a = this.results;
         let b = {};
-        /*
-        Success: check if action succeeds; total < 0 = success. 1:1 with failure. increase magnitude above 0.
-        Advantage: opportunity for positive side effect. 1:1 with threat. increase magnitude.
-        Triumph: equals 1 success. Can cancel success with failure. Secondary side effect not canceled by failure.
-        */
-        
-        /*
-        Failure: If failure > 0, net failure.  Multiple failures do not add up; is boolean.
-        Threat: Increase per extra threat total after counting?
-        Despair: equals 1 failure, can be canceled.
-        */
-        /*
-        DarkDestiny: Just total
-        LightDestiny: Just total
-        */
         b.success = a.success;
         b.advantage = a.advantage;
         b.failure = a.failure;
@@ -198,15 +183,15 @@ class DiceStore extends EventEmitter {
         
     }
 
-    getDice() {
+    getAllDice() {
         return this.dice;
     }
-    
-    getAvailable() {
+
+    getAvailableDice() {
         return this.availableDice;
     }
     
-    getActive() {
+    getActiveDice() {
         return this.activeDice;
     }    
     
@@ -256,6 +241,35 @@ class DiceStore extends EventEmitter {
                 this.clearRollResults();
                 break;
             }
+                
+                
+            // These correctly run their functions and data is accessible here, but not returning to views/components
+//            case "GET_ALL_DICE":{
+//                return this.getAllDice();
+//                break;
+//            }
+//            
+//            case "GET_ACTIVE_DICE":{
+//                this.getActiveDice();
+//                break;
+//            }    
+//
+//            case "GET_AVAILABLE_DICE":{
+//                this.getAvailableDice();
+//                break;
+//            }   
+//                
+//            case "GET_ROLL_RESULTS":{
+//                this.getRollResults();
+//                break;
+//            }    
+//                
+//            
+//            case "CHECK_IF_ROLLED":{
+//                this.checkIfRolled();
+//                break;
+//            }                       
+                
             default: {
                 break;
             }

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import * as DiceActions from './DiceActions';
 import DiceStore from './DiceStore';
+import * as DiceActions from './DiceActions';
 
 import AvailableDiceHolder from './AvailableDiceHolder';
 import ActiveDiceHolder from './ActiveDiceHolder';
@@ -11,16 +11,23 @@ export default class DiceHolder extends React.Component {
 
     constructor(){
         super();
-            this.state = {activeDice: DiceStore.getActive(), availableDice: DiceStore.getAvailable(), rollResults: DiceStore.getRollResults(), rolled: DiceStore.checkRolled()}
+        
+        this.state = {
+            allDice: DiceStore.getAllDice(), 
+            activeDice: DiceStore.getActiveDice(), 
+            availableDice: DiceStore.getAvailableDice(), 
+            rollResults: DiceStore.getRollResults(), 
+            rolled: DiceStore.checkIfRolled()
+        }
     }
     
-    componentDidMount(){
+    componentDidMount(){ 
         DiceStore.on("change", () => {
             this.setState({
-                activeDice: DiceStore.getActive(),
-                availableDice: DiceStore.getAvailable(),
+                activeDice: DiceStore.getActiveDice(),
+                availableDice: DiceStore.getAvailableDice(),
                 rollResults: DiceStore.getRollResults(),
-                rolled: DiceStore.checkRolled()
+                rolled: DiceStore.checkIfRolled()
             })
         })
     }
@@ -41,13 +48,15 @@ export default class DiceHolder extends React.Component {
             <div id="dice-container">
                 {rollResults}
                 <section id="available-dice-container">
-                    <AvailableDiceHolder availableDice={this.state.availableDice} dice={DiceStore.getDice()} />
+                    <AvailableDiceHolder availableDice={this.state.availableDice} dice={this.state.all} />
                 </section>
                 <section id="active-dice-container">
                     <h1>Active Dice</h1>
-                    <ActiveDiceHolder activeDice={this.state.activeDice} dice={DiceStore.getDice()} availableDice={this.state.availableDice}/>
+                    <ActiveDiceHolder activeDice={this.state.activeDice} dice={this.state.allDice} availableDice={this.state.availableDice}/>
                 </section>
-            </div>
+            </div>                
         )
     }
 }
+
+

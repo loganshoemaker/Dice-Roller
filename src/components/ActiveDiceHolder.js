@@ -35,7 +35,6 @@ export default class ActiveDiceHolder extends React.Component {
     }
     
     checkActiveDice(a) {
-        console.log(a.length);
         if (a.length > 0){
             return (
                 a.map((dice, i) => 
