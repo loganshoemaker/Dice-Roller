@@ -243,33 +243,6 @@ class DiceStore extends EventEmitter {
             }
                 
                 
-            // These correctly run their functions and data is accessible here, but not returning to views/components
-//            case "GET_ALL_DICE":{
-//                return this.getAllDice();
-//                break;
-//            }
-//            
-//            case "GET_ACTIVE_DICE":{
-//                this.getActiveDice();
-//                break;
-//            }    
-//
-//            case "GET_AVAILABLE_DICE":{
-//                this.getAvailableDice();
-//                break;
-//            }   
-//                
-//            case "GET_ROLL_RESULTS":{
-//                this.getRollResults();
-//                break;
-//            }    
-//                
-//            
-//            case "CHECK_IF_ROLLED":{
-//                this.checkIfRolled();
-//                break;
-//            }                       
-                
             default: {
                 break;
             }
