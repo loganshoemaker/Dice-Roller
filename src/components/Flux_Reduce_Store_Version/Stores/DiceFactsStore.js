@@ -10,6 +10,7 @@ import * as BlackDice from './../../Dice/BlackDiceData.js';
 import * as RedDice from './../../Dice/RedDiceData.js';
 import * as WhiteDice from './../../Dice/WhiteDiceData.js';
 
+// This may not need to extend ReduceStore as it should contain static data
 class DiceFactsStore extends ReduceStore {
 
   constructor() {
@@ -40,11 +41,9 @@ class DiceFactsStore extends ReduceStore {
   }
 
   reduce(state, action) {
-      switch (action.type) {
-          default:
-              return state;
-      }
+    return state;
   }    
+
 }
 
 export default new DiceFactsStore();
