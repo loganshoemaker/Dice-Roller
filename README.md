@@ -1,3 +1,7 @@
+Dice-Roller for Star Wars: Edge of the Empire RPG built with React.  Master version, while working great, contains extremely high level implementation of Flux unidirectional data-flow concepts.  A branch has been created to use a more proper implementation of this architecture; stores are separated out for pieces of the app (active vs. available dice) and higher order components (HOCs) are being utilized as containers to serve as a single entry-point for the various stores' states/data throughout the containers.
+
+------------------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
