@@ -10,14 +10,6 @@ import * as BlackDice from './../../Dice/BlackDiceData.js';
 import * as RedDice from './../../Dice/RedDiceData.js';
 import * as WhiteDice from './../../Dice/WhiteDiceData.js';
 
-import BlackDie from './../../../styles/images/black.png';
-import BlueDie from './../../../styles/images/blue.png';
-import GreenDie from './../../../styles/images/green.png';
-import PurpleDie from './../../../styles/images/purple.png';
-import RedDie from './../../../styles/images/red.png';
-import WhiteDie from './../../../styles/images/white.png';
-import YellowDie from './../../../styles/images/yellow.png';
-
 class DiceFactsStore extends ReduceStore {
 
   constructor() {
