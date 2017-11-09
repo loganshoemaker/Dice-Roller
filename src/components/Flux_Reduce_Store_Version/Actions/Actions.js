@@ -2,73 +2,53 @@ import ActionTypes from './ActionTypes';
 import diceDispatcher from './../../DiceDispatcher';
 
 const Actions = {
+
+  addActiveDice(dice) {
+    diceDispatcher.dispatch({
+      type: ActionTypes.ADD_ACTIVE_DICE,
+      dice
+    })
+  },
+
+  removeActiveDice(dice){
+    diceDispatcher.dispatch({
+      type: ActionTypes.REMOVE_ACTIVE_DICE,
+      dice
+    })
+  },
+
+  addAvailableDice(dice) {
+    diceDispatcher.dispatch({
+      type: ActionTypes.ADD_AVAILABLE_DICE,
+      dice
+    })
+  },
+
+  removeAvailableDice(dice){
+    diceDispatcher.dispatch({
+      type: ActionTypes.REMOVE_AVAILABLE_DICE,
+      dice
+    })
+  },
+
+  roll(){
+    diceDispatcher.dispatch({
+      type: ActionTypes.ROLL
+    })
+  },
+
   toggleRolled() {
     diceDispatcher.dispatch({
       type: ActionTypes.TOGGLE_ROLLED
     })
   },
+
+  clearRollResults(){
+    diceDispatcher.dispatch({
+      type: ActionTypes.CLEAR_ROLL_RESULTS
+    })
+
+  }
 };
 
 export default Actions;
-
-  // Examples to reference
-  // addTodo(text) {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.ADD_TODO,
-  //     text,
-  //   });
-  // },
-
-  // deleteCompletedTodos() {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.DELETE_COMPLETED_TODOS,
-  //   });
-  // },
-
-  // deleteTodo(id) {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.DELETE_TODO,
-  //     id,
-  //   });
-  // },
-
-  // editTodo(id, text) {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.EDIT_TODO,
-  //     id,
-  //     text,
-  //   });
-  // },
-
-  // startEditingTodo(id) {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.START_EDITING_TODO,
-  //     id,
-  //   });
-  // },
-
-  // stopEditingTodo() {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.STOP_EDITING_TODO,
-  //   });
-  // },
-
-  // toggleAllTodos() {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.TOGGLE_ALL_TODOS,
-  //   });
-  // },
-  
-  // toggleTodo(id) {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.TOGGLE_TODO,
-  //     id,
-  //   });
-  // },
-
-  // updateDraft(text) {
-  //   TodoDispatcher.dispatch({
-  //     type: TodoActionTypes.UPDATE_DRAFT,
-  //     text,
-  //   });
-  // },
