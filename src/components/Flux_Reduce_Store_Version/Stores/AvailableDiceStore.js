@@ -49,6 +49,8 @@ class AvailableDiceStore extends ReduceStore {
 
     reduce(state, action) {
         switch (action.type) {
+            case 'ADD_ACTIVE_DICE':
+                return state;
             default:
                 return state;
         }

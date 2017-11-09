@@ -6,15 +6,17 @@ function AppView(props) {
   return (
     <div id="dice-container">
       <AvailableDicePool {...props} />
+      <ActiveDicePool {...props} />
     </div>
   );
 }
 
 function AvailableDicePool(props) {
+  console.log(props);
   return (
     <section id="available-dice-container">
       {[props.availableDice.map((die, index)=>(
-        <div className="die"  key={index}>
+        <div className="die" onClick={ () => props.onAddActiveDie(die)} key={index}>
           <img src={die.imagefile} alt={die.name}/><br/>
           <span className="remaining-value">{die.available}</span>
           <span className="remainig-label">Remaining</span>
@@ -23,6 +25,55 @@ function AvailableDicePool(props) {
     </section>
   );
 }
+
+function ActiveDicePool(props) {
+
+  // function prepareActiveDice() {
+  //   console.log(props.activeDice);
+  //   let diceContainer = [];
+  //   props.activeDice.map((activeDice) => {
+  //     let i = 0;
+  //     while (i < activeDice.active) {
+  //       diceContainer.push(activeDice);
+  //       i++;
+  //     }    
+  //   })
+  //   return diceContainer;
+  // }
+
+  // checkRollButton = (a) => {
+  //   if (a.length > 0) {
+  //     return <Button handleClick={ () => DiceActions.roll() } text="Roll Dice" />
+  //   }
+  // }
+
+  // checkActiveDice = (a) => {
+  //   if (a.length > 0){
+  //     return (
+  //       a.map((dice, i) => 
+  //         <div className="die" key={i}>
+  //           <img onClick={ () => DiceActions.removeActiveDice(dice) } src={dice.imagefile} alt={dice.name}/>
+  //         </div>
+  //       )
+  //     )
+  //   } else {
+  //     return <div className="description">You have no active dice</div>
+  //   }
+  // }  
+  
+  return (
+    <section id="active-dice-containre">
+      {[props.activeDice.map((die, index)=>(
+        <div className="die" key={index}>
+        
+        </div>
+      ))]}
+    </section>
+  );
+}
+
+
+
 
 // // Creating stateless presentational component using props
 // function Main(props) {

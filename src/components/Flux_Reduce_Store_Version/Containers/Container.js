@@ -26,7 +26,8 @@ function getState() {
     activeDice: ActiveDiceStore.getState().activeDice,
     availableDice: AvailableDiceStore.getState().availableDice,
     rollResults: RollResultsStore.getState().rollResults,
-    onToggleRolled: Actions.toggleRolled
+    onToggleRolled: Actions.toggleRolled,
+    onAddActiveDie: Actions.addActiveDice,
   };
 }
 
