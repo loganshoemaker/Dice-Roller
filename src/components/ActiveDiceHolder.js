@@ -53,7 +53,7 @@ export default class ActiveDiceHolder extends React.Component {
             return (
                 <div>
                     <div className="description">Click a dice to remove it from your active pool</div> 
-                    <Button handleClick={ () => window.location.reload()} text="Remove All Dice" />    
+                    <Button handleClick={ () => DiceActions.removeAllActiveDice() } text="Remove All Active Dice" />
                 </div>
             )
         }

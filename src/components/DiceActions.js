@@ -20,6 +20,12 @@ export function roll() {
     })
 }
 
+export function removeAllActiveDice() {
+    diceDispatcher.dispatch({
+        type: "REMOVE_ALL_ACTIVE_DICE"
+    })
+}
+
 export function clearRollResults() {
     diceDispatcher.dispatch({
         type: "CLEAR_ROLL_RESULTS"

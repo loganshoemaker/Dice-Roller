@@ -110,6 +110,60 @@ class DiceStore extends EventEmitter {
         this.rolled = false;
         this.emit("change");
     }    
+
+    removeAllActiveDice() {
+        this.availableDice = [
+            {name: 'green',
+             available: 6,
+            imagefile: GreenDie,},
+            {name: 'yellow',
+             available: 4,
+            imagefile: YellowDie,},
+            {name: 'black',
+             available: 4,
+            imagefile: BlackDie},
+            {name: 'blue',
+             available: 4,
+             imagefile: BlueDie,},
+            {name: 'purple',
+             available: 6,
+            imagefile: PurpleDie,},
+            {name: 'red',
+             available: 2,
+            imagefile: RedDie,},
+            {name: 'white',
+             available: 2,
+            imagefile: WhiteDie,}
+        ]
+        
+        this.activeDice = [
+            {name: 'green',
+             active: 0,
+            imagefile: GreenDie,},
+            {name: 'yellow',
+             active: 0,
+            imagefile: YellowDie,},
+            {name: 'black',
+             active: 0,
+            imagefile: BlackDie},
+            {name: 'blue',
+             active: 0,
+             imagefile: BlueDie,},
+            {name: 'purple',
+             active: 0,
+            imagefile: PurpleDie,},
+            {name: 'red',
+             active: 0,
+            imagefile: RedDie,},
+            {name: 'white',
+             active: 0,
+            imagefile: WhiteDie,}
+        ]
+
+        this.rolled = false;
+        
+        this.emit("change");
+    }
     
     getRollResults() {
         let a = this.results;
@@ -239,6 +293,11 @@ class DiceStore extends EventEmitter {
             }    
             case "CLEAR_ROLL_RESULTS": {
                 this.clearRollResults();
+                break;
+            }
+
+            case "REMOVE_ALL_ACTIVE_DICE": {
+                this.removeAllActiveDice();
                 break;
             }
                 
