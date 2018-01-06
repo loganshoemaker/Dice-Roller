@@ -11,26 +11,20 @@ export default class ActiveDiceHolder extends React.Component {
     }
 
     prepareActiveDice() {
-        
         let diceContainer = [];
-        
         this.props.activeDice.map((activeDice) => {
-            
             let i = 0;
-            
             while (i < activeDice.active) {
                 diceContainer.push(activeDice);
                 i++;
             }   
-            
         })
-        
         return diceContainer;
     }
     
     checkRollButton(a) {
         if (a.length > 0) {
-            return <Button handleClick={ () => DiceActions.roll() } text="Roll Dice" />
+            return <Button handleClick={ () => DiceActions.roll() }>Roll Dice</Button>
         }
     }
     
@@ -53,7 +47,7 @@ export default class ActiveDiceHolder extends React.Component {
             return (
                 <div>
                     <div className="description">Click a dice to remove it from your active pool</div> 
-                    <Button handleClick={ () => DiceActions.removeAllActiveDice() } text="Remove All Active Dice" />
+                    <Button handleClick={ () => DiceActions.removeAllActiveDice() }>Remove All Active Dice</Button>
                 </div>
             )
         }
