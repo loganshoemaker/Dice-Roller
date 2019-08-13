@@ -184,7 +184,6 @@ class DiceStore extends EventEmitter {
     }
     
     rollDice() {
-        
         this.results = {
             success: 0,
             threat: 0,
@@ -199,13 +198,15 @@ class DiceStore extends EventEmitter {
         
         const diceToRoll = [];
         const sidesRolled = [];
-        const sidesRolledImages = [];
         let availableKeys = [];
         
         // Create the pool of dice to actually roll
-        this.activeDice.map((activeDice) => {
-            this.dice.map((dice) => {
-                if (activeDice.active !== 0 && activeDice.name == dice.name){
+        this.activeDice.forEach((activeDice) => {
+            this.dice.forEach((dice) => {
+                if (
+                    activeDice.active !== 0
+                    && activeDice.name === dice.name
+                ){
                     let i = 0;
                     while (i < activeDice.active) {
                         diceToRoll.push(Object.assign(activeDice, dice));
@@ -216,7 +217,7 @@ class DiceStore extends EventEmitter {
         })
         
         // Get the number of sides
-        diceToRoll.map((dice) => {
+        diceToRoll.forEach((dice) => {
             const numberOfSides = Object.keys(dice.facts.sides).length;
             
             // Get a random side for a dice and push that it to an array
@@ -226,8 +227,8 @@ class DiceStore extends EventEmitter {
             availableKeys = Object.keys(dice.facts.sides[sideRolled]);
         })
 
-        sidesRolled.map((side) => {
-            availableKeys.map((key) => {
+        sidesRolled.forEach((side) => {
+            availableKeys.forEach((key) => {
                 this.results[key] = (this.results[key] + side[key])
             })
         })
@@ -250,10 +251,13 @@ class DiceStore extends EventEmitter {
     }    
     
     addActiveDice(data) {
-        this.availableDice.map((availableDice) => {
-            if (availableDice.name == data.name && availableDice.available !== 0) {
-                this.activeDice.map((activeDice) => {
-                    if (availableDice.name == activeDice.name) {
+        this.availableDice.forEach((availableDice) => {
+            if (
+                availableDice.name === data.name
+                && availableDice.available !== 0
+            ) {
+                this.activeDice.forEach((activeDice) => {
+                    if (availableDice.name === activeDice.name) {
                         availableDice.available--;
                         activeDice.active++;
                     }  
@@ -264,10 +268,13 @@ class DiceStore extends EventEmitter {
     }
     
     removeActiveDice(data) {
-        this.activeDice.map((activeDice) => {
-            if (activeDice.name == data.name && activeDice !== 0) {
-                this.availableDice.map((availableDice) =>{
-                    if(availableDice.name == activeDice.name){
+        this.activeDice.forEach((activeDice) => {
+            if (
+                activeDice.name === data.name
+                && activeDice !== 0
+            ) {
+                this.availableDice.forEach((availableDice) =>{
+                    if(availableDice.name === activeDice.name){
                         availableDice.available++;
                         activeDice.active--;
                     }

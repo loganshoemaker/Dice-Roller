@@ -1,18 +1,11 @@
 import React from 'react';
-
 import Button from './Button';
 import * as DiceActions from './DiceActions';
-import DiceStore from './DiceStore';
 
 export default class ActiveDiceHolder extends React.Component {
-    
-    constructor(props){
-        super(props)
-    }
-
     prepareActiveDice() {
         let diceContainer = [];
-        this.props.activeDice.map((activeDice) => {
+        this.props.activeDice.forEach((activeDice) => {
             let i = 0;
             while (i < activeDice.active) {
                 diceContainer.push(activeDice);

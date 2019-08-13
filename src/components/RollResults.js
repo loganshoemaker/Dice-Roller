@@ -1,16 +1,14 @@
 import React from 'react';
-
 import * as DiceActions from './DiceActions';
-import DiceStore from './DiceStore';
 import Button from './Button';
 
 const RollResults = props => {
-    const { data, ...rest } = props;
+    const { data } = props;
     return (            
         <section id="roll-results-container">
             <h2>Roll Results</h2>
             <div>
-                {data.sides.map((image, i) => <img key={i} src={image}/>)}
+                {data.sides.map((image, i) => <img key={i} src={image} alt="dice"/>)}
             </div>
             <div>
                 <strong>Success: {data.success}</strong><br/>
