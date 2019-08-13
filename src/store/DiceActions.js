@@ -1,4 +1,4 @@
-import diceDispatcher from './DiceDispatcher';
+import diceDispatcher from './diceDispatcher';
 
 export function addActiveDice(data) {
     diceDispatcher.dispatch({
@@ -17,6 +17,12 @@ export function removeActiveDice(data) {
 export function roll() {
     diceDispatcher.dispatch({
         type: "ROLL"
+    })
+}
+
+export function removeAllActiveDice() {
+    diceDispatcher.dispatch({
+        type: "REMOVE_ALL_ACTIVE_DICE"
     })
 }
 

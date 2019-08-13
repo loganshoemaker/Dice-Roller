@@ -3,7 +3,7 @@ import white_1L from './../../styles/images/whiteDice/white_1L.png';
 import white_2d from './../../styles/images/whiteDice/white_2d.png';
 import white_2L from './../../styles/images/whiteDice/white_2L.png';
 
-export const WhiteDice = {
+const whiteDice = {
       sides: [
         {success: 0,
          advantage: 0,
@@ -128,3 +128,5 @@ export const WhiteDice = {
           
     ]
 };
+
+export default whiteDice;

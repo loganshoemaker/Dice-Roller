@@ -7,7 +7,7 @@ import yellow_2a from './../../styles/images/yellowDice/yellow_2a.png';
 import yellow_2s from './../../styles/images/yellowDice/yellow_2s.png';
 
 
-export const YellowDice = {
+const yellowDice = {
     sides: [
         {success: 0,
          advantage: 2,
@@ -142,3 +142,5 @@ export const YellowDice = {
         },       
     ]        
 };
+
+export default yellowDice;
