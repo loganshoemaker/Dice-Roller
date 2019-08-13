@@ -4,8 +4,7 @@ import blue_1a1s from './../../styles/images/blueDice/blue_1a1s.png';
 import blue_1s from './../../styles/images/blueDice/blue_1s.png';
 import blue_2a from './../../styles/images/blueDice/blue_2a.png';
 
-
-export const blueDice = {
+const blueDice = {
       sides: [
         {
           success: 1,
@@ -75,3 +74,5 @@ export const blueDice = {
         }
     ]
 };
+
+export default blueDice;

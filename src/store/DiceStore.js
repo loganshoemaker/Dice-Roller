@@ -1,11 +1,11 @@
 import diceDispatcher from '../store/diceDispatcher';
-import BlackDie from './../styles/images/black.png';
-import BlueDie from './../styles/images/blue.png';
-import GreenDie from './../styles/images/green.png';
-import PurpleDie from './../styles/images/purple.png';
-import RedDie from './../styles/images/red.png';
-import WhiteDie from './../styles/images/white.png';
-import YellowDie from './../styles/images/yellow.png';
+import BlackDie from '../styles/images/black.png';
+import BlueDie from '../styles/images/blue.png';
+import GreenDie from '../styles/images/green.png';
+import PurpleDie from '../styles/images/purple.png';
+import RedDie from '../styles/images/red.png';
+import WhiteDie from '../styles/images/white.png';
+import YellowDie from '../styles/images/yellow.png';
 import { EventEmitter } from 'events';
 import {
     blackDice,
@@ -15,30 +15,31 @@ import {
     redDice,
     whiteDice,
     yellowDice
-} from '../assets';
+} from '../assets/dice';
 
 class DiceStore extends EventEmitter {
 
     constructor() {
+        console.log(blackDice);
         super();
         
         this.rolled = false;
         
         this.dice = [
             {name: 'purple',
-             facts: purpleDice.PurpleDice},
+             facts: purpleDice},
             {name: 'green',
-             facts: greenDice.GreenDice},
+             facts: greenDice},
             {name: 'yellow',
-            facts: yellowDice.YellowDice}, 
+            facts: yellowDice}, 
             {name: 'blue',
-             facts: blueDice.BlueDice},
+             facts: blueDice},
             {name: 'black',
-             facts: blackDice.BlackDice},
+             facts: blackDice},
             {name: 'red',
-             facts: redDice.RedDice},
+             facts: redDice},
             {name: 'white',
-             facts: whiteDice.WhiteDice}
+             facts: whiteDice}
         ];
         
         this.availableDice = [
@@ -199,7 +200,7 @@ class DiceStore extends EventEmitter {
         const diceToRoll = [];
         const sidesRolled = [];
         let availableKeys = [];
-        
+
         // Create the pool of dice to actually roll
         this.activeDice.forEach((activeDice) => {
             this.dice.forEach((dice) => {
@@ -215,9 +216,10 @@ class DiceStore extends EventEmitter {
                 }
             })    
         })
-        
+
         // Get the number of sides
         diceToRoll.forEach((dice) => {
+            console.log(dice);
             const numberOfSides = Object.keys(dice.facts.sides).length;
             
             // Get a random side for a dice and push that it to an array
@@ -235,7 +237,6 @@ class DiceStore extends EventEmitter {
 
         this.rolled = true;
         this.emit("change");
-        
     }
 
     getAllDice() {

@@ -6,7 +6,7 @@ import red_1t from './../../styles/images/redDice/red_1t.png';
 import red_2f from './../../styles/images/redDice/red_2f.png';
 import red_2t from './../../styles/images/redDice/red_2t.png';
 
-export const redDice = {
+const redDice = {
       sides: [
         {success: 0,
          advantage: 0,
@@ -131,3 +131,5 @@ export const redDice = {
           
     ]
 };
+
+export default redDice;

@@ -2,7 +2,7 @@ import black from './../../styles/images/blackDice/black.png';
 import black_1f from './../../styles/images/blackDice/black_1f.png';
 import black_1t from './../../styles/images/blackDice/black_1t.png';
 
-export const blackDice = {
+const blackDice = {
   sides: [
     {
       success: 0,
@@ -71,3 +71,5 @@ export const blackDice = {
     }
   ]
 };
+
+export default blackDice;
