@@ -1,11 +1,10 @@
 import React from 'react';
-
-import DiceStore from './DiceStore';
-import * as DiceActions from './DiceActions';
-
-import AvailableDiceHolder from './AvailableDiceHolder';
-import ActiveDiceHolder from './ActiveDiceHolder';
-import RollResults from './RollResults';
+import DiceStore from '../store/diceStore';
+import {
+    AvailableDiceHolder,
+    ActiveDiceHolder,
+    RollResults,
+} from './';
 
 export default class DiceHolder extends React.Component {
 
@@ -33,7 +32,7 @@ export default class DiceHolder extends React.Component {
     }
     
     checkIfRolled() {
-        if (this.state.rolled == true){
+        if (this.state.rolled){
             return <div id="roll-results-container">
                     <RollResults data={this.state.rollResults}/>                
                 </div>

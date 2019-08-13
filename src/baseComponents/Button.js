@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Button = props => {
-    const { children, handleClick, ...rest } = props;
+    const { 
+        children,
+        handleClick
+    } = props;
+
     return (
         <button onClick={handleClick}>{children}</button>
     )

@@ -6,7 +6,7 @@ import green_s1a1 from './../../styles/images/greenDice/green_s1a1.png';
 import green_s2 from './../../styles/images/greenDice/green_s2.png';
 
 
-export const GreenDice = {
+const greenDice = {
       sides: [
         {success: 1,
          advantage: 0,
@@ -89,3 +89,5 @@ export const GreenDice = {
          imgFile: green},          
       ]
 };
+
+export default greenDice;

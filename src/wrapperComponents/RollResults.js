@@ -1,16 +1,14 @@
 import React from 'react';
-
-import * as DiceActions from './DiceActions';
-import DiceStore from './DiceStore';
-import Button from './Button';
+import * as diceActions from '../store/diceActions';
+import { Button } from '../baseComponents';
 
 const RollResults = props => {
-    const { data, ...rest } = props;
+    const { data } = props;
     return (            
         <section id="roll-results-container">
             <h2>Roll Results</h2>
             <div>
-                {data.sides.map((image, i) => <img key={i} src={image}/>)}
+                {data.sides.map((image, i) => <img key={i} src={image} alt="dice"/>)}
             </div>
             <div>
                 <strong>Success: {data.success}</strong><br/>
@@ -26,7 +24,7 @@ const RollResults = props => {
                 <h1>Net Success: {data.netSuccess}</h1>
                 <h1>Net Advantage: {data.netAdvantage}</h1>
             </div>
-            <Button handleClick={ () => DiceActions.clearRollResults() }>Clear Results</Button>
+            <Button handleClick={ () => diceActions.clearRollResults() }>Clear Results</Button>
         </section>
     )
 }

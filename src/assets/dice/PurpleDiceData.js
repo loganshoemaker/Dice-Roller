@@ -5,7 +5,7 @@ import purple_1t1f from './../../styles/images/purpleDice/purple_1t1f.png';
 import purple_2f from './../../styles/images/purpleDice/purple_2f.png';
 import purple_2t from './../../styles/images/purpleDice/purple_2t.png';
 
-export const PurpleDice = {
+const purpleDice = {
       sides: [
         {success: 0,
          advantage: 0,
@@ -96,3 +96,5 @@ export const PurpleDice = {
         },  
       ]
 };
+
+export default purpleDice;

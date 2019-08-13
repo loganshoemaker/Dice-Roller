@@ -1,16 +1,21 @@
 import React from 'react';
+import { Button } from '../baseComponents';
 
 export default class RollButton extends React.Component {
     
     constructor(props){
         super(props)
-        this.state = {ActiveDice: this.props.ActiveDice, RollResults: {}, SideImages: []};
+        this.state = {
+            activeDice: this.props.activeDice,
+            rollResults: {},
+            sideImages: []
+        };
     }
     
     componentWillReceiveProps(nextProps){
-        if (this.state.ActiveDice !== nextProps.ActiveDice) {
+        if (this.state.activeDice !== nextProps.activeDice) {
             this.setState({
-                ActiveDice: nextProps.ActiveDice
+                activeDice: nextProps.activeDice
             })
         }         
     }
@@ -20,17 +25,16 @@ export default class RollButton extends React.Component {
     }
     
     calculateResults = () => {
-        
-        let data = this.state.ActiveDice;
-        let results = {};
-        let sideImages = [];
-        let resultValues = [];
+        const data = this.state.activeDice;
+        const results = {};
+        const sideImages = [];
+        const resultValues = [];
         data.forEach(function (dice) {
-            let sideRolled = Math.floor(Math.random() * (dice.type)) + 0;
-            let sideRolledValue = dice.sides[sideRolled];
+            const sideRolled = Math.floor(Math.random() * (dice.type)) + 0;
+            const sideRolledValue = dice.sides[sideRolled];
             resultValues.push(sideRolledValue);
             sideImages.push(sideRolledValue.imgFile);
-        })
+        });
         results.success = 0; 
         results.advantage = 0;
         results.failure = 0;
@@ -56,7 +60,7 @@ export default class RollButton extends React.Component {
     
     render() {            
         return (
-            <button onClick={ () => this.calculateResults() }>Roll</button>
+            <Button onClick={ () => this.calculateResults() }>Roll</Button>
         )
     }
 
