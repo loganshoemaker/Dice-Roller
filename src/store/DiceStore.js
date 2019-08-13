@@ -1,11 +1,4 @@
-import diceDispatcher from './DiceDispatcher';
-import * as PurpleDice from './assets/Dice/PurpleDiceData.js';
-import * as GreenDice from './assets/Dice/GreenDiceData.js';
-import * as YellowDice from './assets/Dice/YellowDiceData.js';
-import * as BlueDice from './assets/Dice/BlueDiceData.js';
-import * as BlackDice from './assets/Dice/BlackDiceData.js';
-import * as RedDice from './assets/Dice/RedDiceData.js';
-import * as WhiteDice from './assets/Dice/WhiteDiceData.js';
+import diceDispatcher from '../store/diceDispatcher';
 import BlackDie from './../styles/images/black.png';
 import BlueDie from './../styles/images/blue.png';
 import GreenDie from './../styles/images/green.png';
@@ -14,6 +7,15 @@ import RedDie from './../styles/images/red.png';
 import WhiteDie from './../styles/images/white.png';
 import YellowDie from './../styles/images/yellow.png';
 import { EventEmitter } from 'events';
+import {
+    blackDice,
+    blueDice,
+    greenDice,
+    purpleDice,
+    redDice,
+    whiteDice,
+    yellowDice
+} from '../assets';
 
 class DiceStore extends EventEmitter {
 
@@ -24,19 +26,19 @@ class DiceStore extends EventEmitter {
         
         this.dice = [
             {name: 'purple',
-             facts: PurpleDice.PurpleDice},
+             facts: purpleDice.PurpleDice},
             {name: 'green',
-             facts: GreenDice.GreenDice},
+             facts: greenDice.GreenDice},
             {name: 'yellow',
-            facts: YellowDice.YellowDice}, 
+            facts: yellowDice.YellowDice}, 
             {name: 'blue',
-             facts: BlueDice.BlueDice},
+             facts: blueDice.BlueDice},
             {name: 'black',
-             facts: BlackDice.BlackDice},
+             facts: blackDice.BlackDice},
             {name: 'red',
-             facts: RedDice.RedDice},
+             facts: redDice.RedDice},
             {name: 'white',
-             facts: WhiteDice.WhiteDice}
+             facts: whiteDice.WhiteDice}
         ];
         
         this.availableDice = [

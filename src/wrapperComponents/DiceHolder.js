@@ -1,8 +1,10 @@
 import React from 'react';
-import DiceStore from './DiceStore';
-import AvailableDiceHolder from './AvailableDiceHolder';
-import ActiveDiceHolder from './ActiveDiceHolder';
-import RollResults from './RollResults';
+import DiceStore from '../store/diceStore';
+import {
+    AvailableDiceHolder,
+    ActiveDiceHolder,
+    RollResults,
+} from './';
 
 export default class DiceHolder extends React.Component {
 

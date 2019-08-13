@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-
 import './styles/main.css';
-
-import DiceHolder from './components/DiceHolder.js';
+import DiceHolder from './wrapperComponents/DiceHolder';
 
 class App extends Component {
     

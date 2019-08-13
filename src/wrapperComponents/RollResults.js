@@ -1,6 +1,6 @@
 import React from 'react';
-import * as DiceActions from './DiceActions';
-import Button from '../baseComponents/Button';
+import * as diceActions from '../store/diceActions';
+import { Button } from '../baseComponents';
 
 const RollResults = props => {
     const { data } = props;
@@ -24,7 +24,7 @@ const RollResults = props => {
                 <h1>Net Success: {data.netSuccess}</h1>
                 <h1>Net Advantage: {data.netAdvantage}</h1>
             </div>
-            <Button handleClick={ () => DiceActions.clearRollResults() }>Clear Results</Button>
+            <Button handleClick={ () => diceActions.clearRollResults() }>Clear Results</Button>
         </section>
     )
 }

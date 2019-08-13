@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../baseComponents/Button';
+import { Button } from '../baseComponents';
 
 export default class RollButton extends React.Component {
     

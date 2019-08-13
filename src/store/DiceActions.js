@@ -1,4 +1,4 @@
-import diceDispatcher from './DiceDispatcher';
+import diceDispatcher from './diceDispatcher';
 
 export function addActiveDice(data) {
     diceDispatcher.dispatch({
