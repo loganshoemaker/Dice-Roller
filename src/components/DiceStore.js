@@ -1,14 +1,12 @@
 import { EventEmitter } from 'events';
 import diceDispatcher from './DiceDispatcher';
-
-import * as PurpleDice from './Dice/PurpleDiceData.js';
-import * as GreenDice from './Dice/GreenDiceData.js';
-import * as YellowDice from './Dice/YellowDiceData.js';
-import * as BlueDice from './Dice/BlueDiceData.js';
-import * as BlackDice from './Dice/BlackDiceData.js';
-import * as RedDice from './Dice/RedDiceData.js';
-import * as WhiteDice from './Dice/WhiteDiceData.js';
-
+import * as PurpleDice from './assets/Dice/PurpleDiceData.js';
+import * as GreenDice from './assets/Dice/GreenDiceData.js';
+import * as YellowDice from './assets/Dice/YellowDiceData.js';
+import * as BlueDice from './assets/Dice/BlueDiceData.js';
+import * as BlackDice from './assets/Dice/BlackDiceData.js';
+import * as RedDice from './assets/Dice/RedDiceData.js';
+import * as WhiteDice from './assets/Dice/WhiteDiceData.js';
 import BlackDie from './../styles/images/black.png';
 import BlueDie from './../styles/images/blue.png';
 import GreenDie from './../styles/images/green.png';
