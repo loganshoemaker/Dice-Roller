@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './Button';
-import * as DiceActions from './DiceActions';
+import Button from '../baseComponents/Button';
+import * as DiceActions from '../actions/DiceActions';
 
 export default class ActiveDiceHolder extends React.Component {
     prepareActiveDice() {

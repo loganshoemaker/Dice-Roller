@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as DiceActions from './DiceActions';
+import * as DiceActions from '../actions/DiceActions';
 
 const AvailableDiceHolder = props => {
     const { availableDice } = props;

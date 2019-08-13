@@ -1,6 +1,6 @@
 import React from 'react';
 import * as DiceActions from './DiceActions';
-import Button from './Button';
+import Button from '../baseComponents/Button';
 
 const RollResults = props => {
     const { data } = props;
