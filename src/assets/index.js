@@ -5,8 +5,8 @@ import {
   purpleDice,
   redDice,
   whiteDice,
-  yellowDice,
-} from './dice';
+  yellowDice
+} from "./dice";
 
 export {
   blackDice,
@@ -15,5 +15,5 @@ export {
   purpleDice,
   redDice,
   whiteDice,
-  yellowDice,
+  yellowDice
 };
